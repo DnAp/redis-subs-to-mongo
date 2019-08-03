@@ -5,8 +5,8 @@ Add to you docker-compose.yml file new service
 ```
   redis_subs_to_mongo:
     image: dnap/redis-subs-to-mongo
+    restart: always
     environment:
-      - REDIS_HOST=redis
       - REDIS_HOST=localhost
       - REDIS_PORT=6379
       - REDIS_CHANNEL=*
