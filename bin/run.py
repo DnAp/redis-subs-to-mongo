@@ -15,7 +15,7 @@ pubSub = redisClient.pubsub()
 pubSub.psubscribe(os.environ['REDIS_CHANNEL'])
 for item in pubSub.listen():
     # {'type': 'message', 'pattern': None, 'channel': b'channel', 'data': b'blah opd'}
-    print(item)
+    # print(item)
     if item['type'] != 'pmessage':
         continue
     try:
